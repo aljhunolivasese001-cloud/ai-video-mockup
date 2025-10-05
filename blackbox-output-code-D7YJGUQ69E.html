@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora 2 - AI Video Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sora 2</h1>
+        <p>Generate AI videos from text or images. Simple and fast.</p>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <h2>Generate Video</h2>
+            <form id="generateForm">
+                <div class="input-group">
+                    <label for="prompt">Text Prompt (for text-to-video):</label>
+                    <textarea id="prompt" placeholder="Describe the video you want, e.g., 'A cat dancing in space'"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="imageInput">Upload Image (for image-to-video):</label>
+                    <input type="file" id="imageInput" accept="image/*">
+                    <div id="imagePreview" class="preview"></div>
+                </div>
+
+                <button type="submit" id="generateBtn">Generate Video</button>
+            </form>
+        </section>
+
+        <section class="output-section" id="outputSection" style="display: none;">
+            <h2>Generated Video</h2>
+            <div id="loading" class="loading" style="display: none;">
+                <p>Generating video... Please wait.</p>
+                <div class="spinner"></div>
+            </div>
+            <div id="result" class="result">
+                <!-- Placeholder result will be inserted here by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sora 2. Mock AI Video Generator (Static Demo).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
